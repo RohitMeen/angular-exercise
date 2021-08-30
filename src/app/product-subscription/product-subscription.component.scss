@@ -1,0 +1,28 @@
+@import '../../assets/scss/_variables.scss';
+.content-mob {
+    position: absolute;
+    top: 113px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    overflow-y: scroll;
+}
+
+.example-card {
+    max-width: 320px;
+    width: 100%;
+    margin: 0px 5px 5px 0px;
+    text-align: center;
+}
+
+.example-sidenav-content {
+    &:first-child{
+        margin: 10px 5px 5px 5px;
+    }
+}
+
+p {
+    color: $bodyColor;
+    font-weight: bold;
+    font-size: 20px;
+}

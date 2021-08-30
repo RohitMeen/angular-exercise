@@ -1,0 +1,20 @@
+<mat-toolbar color="primary" class="custon-headBg">
+    <mat-toolbar-row fxLayoutAlign="space-between center">
+        <div fxLayout="row" class="cust-header">
+            <button mat-button>
+                <mat-icon>home</mat-icon>
+                <span class="logo">Product Application</span>
+            </button>
+            <div *ngIf="!deviceXs">
+                <a mat-button [routerLink]="'/home'" routerLinkActive>Home</a>
+                <a mat-button [routerLink]="'/product-list'" routerLinkActive>Product</a>
+            </div>
+        </div>
+        <div></div>
+    </mat-toolbar-row>
+
+    <mat-toolbar-row *ngIf="deviceXs" fxLayoutAlign="space-between end">
+        <a mat-button [routerLink]="'/home'" routerLinkActive>Home</a>
+        <a mat-button [routerLink]="'/product-list'" routerLinkActive>Product</a>
+    </mat-toolbar-row>
+</mat-toolbar>

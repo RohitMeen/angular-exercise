@@ -1,0 +1,17 @@
+<div fxLayout="column">
+    <h1 mat-dialog-title>{{data?.productData.name}}</h1>
+    <mat-dialog-content>
+        <div mat-subheader>Features</div>
+        <ul>
+            <li *ngFor="let feature of data?.productData?.features">
+                <span>{{feature}}</span>
+            </li>
+        </ul>
+    </mat-dialog-content>
+    <mat-dialog-actions align="center">
+        <button mat-raised-button color="primary" [mat-dialog-close]="true" class="w-100" type="button"
+            style="margin-right: 10px;">Buy {{data?.PlanAmmount | currency}}</button>
+        <button mat-raised-button color="warn" [mat-dialog-close]="false" class="w-100" type="button"
+            cdkFocusInitial>Close</button>
+    </mat-dialog-actions>
+</div>

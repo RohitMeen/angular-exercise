@@ -1,0 +1,138 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&display=swap");
+
+.d-flex {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: center;
+
+  .col-half {
+    width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    h1 {
+      font-family: "Poppins", sans-serif;
+      color: #00d8fd;
+      font-size: 28px;
+      font-weight: 600;
+      text-align: center;
+      line-height: 66px;
+      letter-spacing: 1px;
+      -webkit-animation: blurFadeIn 3s ease-in backwards;
+      -moz-animation: blurFadeIn 3s ease-in backwards;
+      -ms-animation: blurFadeIn 3s ease-in backwards;
+      animation: blurFadeIn 3s ease-in backwards;
+
+      .frame-1 {
+        -webkit-animation-delay: 0s;
+        -moz-animation-delay: 0s;
+        -ms-animation-delay: 0s;
+        animation-delay: 0s;
+      }
+      
+
+      span .custom-big {
+        display: block;
+        font-weight: 600;
+        font-size: 110px;
+        line-height: 110px;
+        margin-bottom: 12px;
+        letter-spacing: 0px;
+      }
+
+      span.custom-product {
+        display: block;
+        font-weight: 600;
+        font-size: 28px;
+      }
+
+    }
+  }
+}
+
+@keyframes blurFadeIn {
+  0% {
+    opacity: 0;
+    -webkit-transform: scale(1.3);
+  }
+  50% {
+    opacity: 0.5;
+    -webkit-transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: scale(1);
+  }
+}
+
+
+/* @import '../../assets/scss/_variables.scss';
+
+.hero-line {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+
+  h1 {
+    color: $bodyColor;
+    text-shadow: 2px 3px 5px $textShadow;
+    margin: 30px 0;
+    font-size: 42px;
+    word-wrap: break-word;
+    text-align: center;
+    animation: spin-letters 10s linear infinite;
+  }
+}
+
+
+
+@keyframes scale-letters {
+  0% {
+    opacity: 0;
+    transform: scale(1.5) translateY(-0.75em);
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  89% {
+    opacity: 1;
+    transform: scale(1);
+  }
+
+  100% {
+    opacity: 0;
+    transform: translateZ(-1000em);
+  }
+}
+
+@keyframes spin-letters {
+
+  0%,
+  10% {
+    opacity: 0;
+    transform: rotateY(90deg);
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  70%,
+  86% {
+    transform: rotateY(0);
+    opacity: 1;
+  }
+
+  95%,
+  100% {
+    opacity: 0;
+  }
+}
+
+ */

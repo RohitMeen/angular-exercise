@@ -1,0 +1,32 @@
+<article [class.content]="!deviceXs" [class.content-mob]="deviceXs">
+    <div *ngIf="productsArray.length > 0 && !isLoading" class="example-sidenav-content" fxLayout="row wrap"
+        fxLayoutAlign="space-evenly baseline">
+        <div fxFlex.gt-lg="20" fxFlex.gt-md="20" fxFlex.gt-xs="100" fxFlex="100" *ngFor="let product of productsArray">
+            <mat-card class="example-card">
+                <mat-card-header fxLayoutAlign="space-evenly center">
+                    <mat-card-title>{{product.name}}</mat-card-title>
+                    <mat-card-subtitle>{{product.id}}</mat-card-subtitle>
+                </mat-card-header>
+                <h3>Available Plans </h3>
+                <div *ngFor="let plan of product.plans">
+                    <span>{{plan.priceCents | currency}} / {{getPaymentIntervalValue(plan)}}</span>
+                    <mat-card-actions>
+                        <app-dialog-button [productData]="product" [planData]="plan">
+                        </app-dialog-button>
+                    </mat-card-actions>
+                </div>
+            </mat-card>
+        </div>
+    </div>
+    <div *ngIf="productsArray.length === 0 && !isLoading" class="example-sidenav-content" fxLayout="row wrap"
+        fxLayoutAlign="space-evenly center">
+        <div fxFlex.gt-lg="20" fxFlex.gt-md="20" fxFlex.gt-xs="100" fxFlex="100">
+            <p>No Product Found</p>
+        </div>
+    </div>
+    <div *ngIf="isLoading" class="example-sidenav-content loader" fxLayout="row wrap" fxLayoutAlign="space-evenly center">
+        <div fxFlex.gt-lg="20" fxFlex.gt-md="20" fxFlex.gt-xs="100" fxFlex="100">
+            <mat-spinner color="accent"></mat-spinner>
+        </div>
+    </div>
+</article>
