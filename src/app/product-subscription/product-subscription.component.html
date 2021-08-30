@@ -24,9 +24,7 @@
             <p>No Product Found</p>
         </div>
     </div>
-    <div *ngIf="isLoading" class="example-sidenav-content loader" fxLayout="row wrap" fxLayoutAlign="space-evenly center">
-        <div fxFlex.gt-lg="20" fxFlex.gt-md="20" fxFlex.gt-xs="100" fxFlex="100">
-            <mat-spinner color="accent"></mat-spinner>
-        </div>
+    <div *ngIf="isLoading" class="example-sidenav-content loader" fxLayout="colmun" fxLayoutAlign="center center">
+        <img src="../../assets/img/Spin-1s-200px.gif" />
     </div>
 </article>

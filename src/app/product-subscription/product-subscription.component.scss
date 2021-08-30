@@ -1,4 +1,4 @@
-@import '../../assets/scss/_variables.scss';
+@import "../../assets/scss/_variables.scss";
 .content-mob {
     position: absolute;
     top: 113px;
@@ -16,7 +16,7 @@
 }
 
 .example-sidenav-content {
-    &:first-child{
+    &:first-child {
         margin: 10px 5px 5px 5px;
     }
 }
@@ -25,4 +25,9 @@ p {
     color: $bodyColor;
     font-weight: bold;
     font-size: 20px;
+}
+.loader {
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
 }
